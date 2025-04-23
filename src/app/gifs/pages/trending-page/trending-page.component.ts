@@ -4,6 +4,5 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'app-trending-page',
   imports: [],
   templateUrl: './trending-page.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TrendingPageComponent { }
+export  default class TrendingPageComponent { }
