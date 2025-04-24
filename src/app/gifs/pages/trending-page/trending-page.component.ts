@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { GifListComponent } from '../../components/gif-list/gif-list.component';
+import { GifsService } from '../../services/gifs.service';
 
 
 
@@ -27,4 +28,7 @@ const imageUrls: string[] = [
 })
 export default class TrendingPageComponent {
   gifs = signal(imageUrls);
+  //importamos el servicio y lo inyectamos en el constructor
+  GifsService=inject(GifsService);
+  //llamamos al servicio y le decimos que cargue los gifs
 }

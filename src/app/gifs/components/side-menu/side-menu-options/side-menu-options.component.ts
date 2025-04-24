@@ -3,7 +3,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 
 
 
-interface MenuOption {
+interface MenuOption {//esto es para definir la estructura de los objetos que se van a usar en el menu
   icon: string;
   label: string;
   router: string;
@@ -18,7 +18,7 @@ interface MenuOption {
 export class SideMenuOptionsComponent {
 
   menuOptions: MenuOption[] = [
-
+    //esto son los objetos que se van a usar en el menu
     {
       icon: 'fa-solid fa-chart-line',
       label: 'Trending',
@@ -30,6 +30,12 @@ export class SideMenuOptionsComponent {
       label: 'Buscador',
       router: '/dashboard/search',
       subLabel: 'Buscar gifs',
+    },
+    {
+      icon: 'fa-solid fa-mangnifying-glass',
+      label: 'Tus gifs',
+      router: '/dashboard/gifs',
+      subLabel: 'Solo de prueba no tocar',
     },
 
   ]
